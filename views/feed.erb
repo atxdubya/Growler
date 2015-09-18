@@ -2,27 +2,26 @@
 		<div class = 'container wrapper'>
 <!-- 			HEADER -->
 			<header>
-				<h2>GROWL</h2>
+				<h1 class="font header1">Growler</h1>
 			</header>
 <!-- 			FORM  -->
-			<form name='frmOne' action='/feed' method='post'>
-				<p>
-					Growl : <input type='text' name='growl' value='' placeholder='Say What You Need To Say'>
-				</p>
-				<p>
-					<input type='submit' value='Growl'>
-				</p>
-			</form>	
-
+			<div class="row">
+				<form class= "col-xs-4" name='frmOne' action='/feed' method='post'>
+					<p class="font">
+						<input class="growl_box" type='text' name='growl' value=''>
+					</p>
+					<p>
+						<input class="button" type='submit' value='Growl'>
+					</p>
+				</form>	
 <!-- 			FEED  -->
-			<section>
-
-				<!-- Need to pull tet out of this array -->
-				<ul id="growl_list">
-				<% @growl_feed.each do |item| %>
-					<li><%= item %></li>
-				<% end %>
-				</ul>
-
-			</section>
+				<section class="col-xs-8">
+					<h2>Growl Feed:</h2>
+					<ul id="growl_list">
+					<% @growl_feed.each do |item| %>
+						<li class="font"><%= item %></li>
+					<% end %>
+					</ul>
+				</section>
+			</div>
 		</div>
