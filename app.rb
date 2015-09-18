@@ -2,13 +2,15 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 before do
-	
+	# Initiating the growl_feed
+	session[:growl_feed] ||= []	
 end
 
 enable :sessions
 
 # Routes
 
+<<<<<<< HEAD
 ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   map.connect ':controller/:action/:id'
@@ -46,3 +48,18 @@ end
 # end
 
 
+=======
+# Essentially homepage
+get '/' do
+	erb :feed
+end
+
+# Posting the growl input to the feed
+post '/feed' do
+
+	session[:growl_feed] << params[:growl]
+	@growl_feed = session[:growl_feed]
+
+	erb :feed
+end
+>>>>>>> 79857b7adce7f217adaf6313b312458655584158
