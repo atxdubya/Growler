@@ -20,7 +20,20 @@ end
 get '/cart' do
 	@shopping_cart = session[:shopping_cart]
 
-	erc :cart
+	erb :cart
 end
 
 # Add a new item
+
+post '/growl' do
+	session[:news_feed] << params[:growl_id]
+
+		@growl_id = params[:growl_id]
+
+		erb :add_growl_success
+end
+
+
+
+
+
