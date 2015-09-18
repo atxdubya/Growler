@@ -1,4 +1,24 @@
+<!-- 		CONTAINER WRAPPER -->
+		<div class = 'container wrapper'>
+<!-- 			HEADER -->
+			<header>
+				<h2>GROWL</h2>
+			</header>
+<!-- 			FORM  -->
+			<form name='frmOne' action='/feed' method='post'>
+				<p>
+					Growl : <input type='text' name='growl' value='' placeholder='Say What You Need To Say'>
+				</p>
+				<p>
+					<input type='submit' value='Growl'>
+				</p>
+			</form>	
 
-<%= @growl_feed %>
+<!-- 			FEED  -->
+			<section>
 
-<%= @growl %>
+				<!-- Need to pull tet out of this array -->
+				<%= @growl_feed %>
+
+			</section>
+		</div>
