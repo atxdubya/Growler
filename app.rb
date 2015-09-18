@@ -7,7 +7,7 @@ end
 
 # Routes
 
-git '/' do
+get '/' do
 
 	erb :index
 end
