@@ -25,6 +25,10 @@ header {
 	padding: 10px;
 }
 
+.brand {
+	width: 75px;
+	height: 75px;
+}
 
 /********
 PAGE
@@ -51,18 +55,23 @@ PAGE
 	height: 50px;
 	background-color: #d2b48c;
 	color: #614126;
+	font-size: 24px;
 }
 
 .button {
 	font-family: 'Marck Script', cursive;
-	font-size: 18px;
+	font-size: 24px;
 	background-color: #a89070;
 	color: #614126;
+	margin-left: 60px;
+	width: 85px;
+
 }
 
 section {
 	border: 5px solid #a89070;
 	text-align: center;
+	font-size: 24px;
 }
 
 h2 {
