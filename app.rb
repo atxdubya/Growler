@@ -9,32 +9,40 @@ enable :sessions
 
 # Routes
 
-get '/' do
-	erb :index
+ActionController::Routing::Routes.draw do |map|
+  map.resources :posts
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
 end
 
-get '/growl/:growl' do
-	# We use this view to display the form
-	session[:growl] = params[:growl]
-	@growl = session[:growl]
+# get '/' do
+# 	erb :index
+# end
 
-	erb :growl
-end
+# get '/growl/:growl' do
+# 	# We use this view to display the form
+# 	session[:growl] = params[:growl]
+# 	@growl = session[:growl]
 
-get '/feed' do
+# 	erb :growl
+# end
 
-	session[:growl_feed] = params[:growl_feed]
-	@growl_feed = session[:growl_feed]
+# get '/feed' do
 
-	erb :feed
-end
+# 	session[:growl_feed] = params[:growl_feed]
+# 	@growl_feed = session[:growl_feed]
 
-# # Add a new item
+# 	erb :feed
+# end
 
-post '/growl' do
-	session[:growl_feed] << params[:growl_id]
+# # # Add a new item
+
+# post '/growl' do
+# 	session[:growl_feed] << params[:growl_id]
 	
-	@growl_id = params[:growl_id]
+# 	@growl_id = params[:growl_id]
 
-	erb :add_growl_success
-end
+# 	erb :add_growl_success
+# end
+
+
