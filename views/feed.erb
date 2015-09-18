@@ -18,7 +18,11 @@
 			<section>
 
 				<!-- Need to pull tet out of this array -->
-				<%= @growl_feed %>
+				<ul id="growl_list">
+				<% @growl_feed.each do |item| %>
+					<li><%= item %></li>
+				<% end %>
+				</ul>
 
 			</section>
 		</div>
