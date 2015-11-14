@@ -10,5 +10,6 @@ Because we're 142 characters strong.
 * Rails
 * RoR
 * Bootstrap
+* Hard Core Knuckle Grease
 
 
